@@ -1,0 +1,76 @@
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #eaf4ff 100%);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+form {
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: clamp(320px, 90vw, 420px);
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+
+/* ===== Inputs ===== */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e0e5ec;
+  border-radius: var(--radius);
+  background: #f9fafb;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 0.2rem rgb(108 99 255 / 15%);
+}
+
+
+button:hover {
+  background: #5548ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(108, 99, 255, 0.3);
+} 
+ 
+button:active {
+  transform: translateY(0);
+} 
+
+/* ===== Dark‑mode tweaks ===== */ 
+ @media (prefers-color-scheme: dark) {
+  body {
+    background: #1b1f24;
+    color: #f1f1f1;
+  }
+
+  form {
+    background: #22272e;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    background: #2d333b;
+    border: 2px solid #3a4048;
+    color: #e6e6e6;
+  }
+
+}
